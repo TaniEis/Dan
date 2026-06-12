@@ -31,6 +31,6 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copy build output from the builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-EXPOSE 3432
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
